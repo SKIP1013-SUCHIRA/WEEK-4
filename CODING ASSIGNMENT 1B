@@ -1,0 +1,53 @@
+package assignment;
+
+import java.util.Scanner;
+
+public class Assignment1B {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int items;
+		double price, price2, price3;
+		double quantity, quantity2, quantity3;
+		double TotalPrice, Discount, DiscountR, PricePaid;
+		
+		
+		Scanner sc = new Scanner (System.in);
+		
+		System.out.println("Enter the number of items: ");
+		items=sc.nextInt();
+		System.out.println("Enter price of first item: RM");
+		price=sc.nextDouble();
+		System.out.println("Enter quantity of first item: ");
+		quantity=sc.nextDouble();
+		
+		System.out.println("\nEnter price of second item: RM");
+		price2=sc.nextDouble();
+		System.out.println("Enter quantity of second item: ");
+		quantity2=sc.nextDouble();
+		
+		System.out.println("\nEnter price of third item: RM");
+		price3=sc.nextDouble();
+		System.out.println("Enter quantity of third item: ");
+		quantity3=sc.nextDouble();
+		
+		TotalPrice= ((price*quantity)+ (price2*quantity2)+ (price3*quantity3));
+		
+		{
+			if(TotalPrice <100 );
+				Discount=0.1;
+			if(TotalPrice >=100);
+				Discount=0.2;
+		}
+		
+		DiscountR = Discount*TotalPrice;
+		
+		PricePaid = TotalPrice-DiscountR;
+		
+		System.out.println("\nTotal price: RM" + TotalPrice);
+		System.out.println("Discount received: RM"+ DiscountR);
+		System.out.println("Price to paid: RM"+PricePaid);
+	}
+
+}
